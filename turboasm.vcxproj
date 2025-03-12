@@ -133,7 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <MASM Include="mboxtest.asm">
+    <MASM Include="asmfile.asm">
       <FileType>CppCode</FileType>
     </MASM>
   </ItemGroup>
