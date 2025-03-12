@@ -1,6 +1,7 @@
-#include <iostream>
 extern "C" void mboxtest(); // Declare the PROC
 extern "C" int vret(); // Declare the PROC
+
+#include <iostream>
 
 void main()
 {
