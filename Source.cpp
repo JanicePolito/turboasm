@@ -1,7 +1,7 @@
-extern "C" void mboxtest(); // Declare the mboxtest PROC
-extern "C" int vret(); // Declare the vret PROC
-extern "C" const char* lowerCase(); // Declare the lowerCase PROC
-extern "C" const char* lowerCaseWithArg(char* str); // Declare the lowerCaseWithArg PROC
+extern "C" void mboxtest();							// Declare the mboxtest PROC
+extern "C" int vret();								// Declare the vret PROC (returning a int value)
+extern "C" const char* lowerCase();					// Declare the lowerCase PROC (returning a string)
+extern "C" const char* lowerCaseWithArg(char* str); // Declare the lowerCaseWithArg PROC (with argument and returning string)
 
 #include <iostream>
 
