@@ -2,6 +2,7 @@ extern "C" void mboxtest();							// Declare the mboxtest PROC
 extern "C" int vret();								// Declare the vret PROC (returning a int value)
 extern "C" const char* lowerCase();					// Declare the lowerCase PROC (returning a string)
 extern "C" const char* lowerCaseWithArg(char* str); // Declare the lowerCaseWithArg PROC (with argument and returning string)
+extern "C" void printFromAsm();						// Declare the printFromAsm PROC
 
 #include <iostream>
 
@@ -9,7 +10,7 @@ void main()
 {
 	std::cout << "Hello, World from standard c++ code!" << std::endl;
 
-	int result = vret();
+	int result = vret();	
 	std::cout << "The result from asm file: " << result << std::endl;
 
 	const char* lowerCaseStr = lowerCase();
@@ -18,8 +19,14 @@ void main()
 	char myStr[] = "EFGH";
 	std::cout << "convertion to lower case from asm file with passing the arguments: " << lowerCaseWithArg(myStr) << std::endl;
 
+	std::cout << "Printing from asm file: " << std::endl;
+	printFromAsm();
+
 	mboxtest();
 }
+
+
+
 /*
 The above code is a simple example of how to call an assembly function from a C++ code.
 The  mboxtest()  function is defined in the assembly file and it is called from the C++ code.
@@ -35,6 +42,7 @@ The  mboxtest()  function is called from the C++ code.
 The  vret()  function is called from the C++ code.
 The  lowerCase()  function is called from the C++ code.
 The  lowerCaseWithArg()  function is called from the C++ code.
+The  printFromAsm()  function is called from the C++ code.
 The  main()  function is called from the C++ code.
 The  main()  function is the entry point of the program
 */
